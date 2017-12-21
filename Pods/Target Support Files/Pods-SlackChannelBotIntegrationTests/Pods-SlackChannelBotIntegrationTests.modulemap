@@ -1,0 +1,6 @@
+framework module Pods_SlackChannelBotIntegrationTests {
+  umbrella header "Pods-SlackChannelBotIntegrationTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

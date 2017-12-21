@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlackChannelBotIntegration" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDF-pZ-AV4">
+                                <rect key="frame" x="24" y="44" width="272" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="QRh-uL-n5k"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="send"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Response and Recieved messages from Slack Channel" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alf-5X-Sph">
+                                <rect key="frame" x="0.0" y="156" width="320" height="412"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Response" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJa-f1-Yqn">
+                                <rect key="frame" x="24" y="119" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="alf-5X-Sph" secondAttribute="bottom" id="4Bg-AI-7Di"/>
+                            <constraint firstAttribute="trailing" secondItem="aDF-pZ-AV4" secondAttribute="trailing" constant="24" id="4gK-pb-3sY"/>
+                            <constraint firstItem="aDF-pZ-AV4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="24" id="7et-eo-3wM"/>
+                            <constraint firstAttribute="trailing" secondItem="alf-5X-Sph" secondAttribute="trailing" id="Cuq-dh-xLC"/>
+                            <constraint firstItem="alf-5X-Sph" firstAttribute="top" secondItem="MJa-f1-Yqn" secondAttribute="bottom" constant="16" id="LD2-6D-aNP"/>
+                            <constraint firstItem="alf-5X-Sph" firstAttribute="top" secondItem="aDF-pZ-AV4" secondAttribute="bottom" constant="80" id="UfU-AX-VZ9"/>
+                            <constraint firstItem="MJa-f1-Yqn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="24" id="nIq-tD-6eR"/>
+                            <constraint firstItem="alf-5X-Sph" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="o8g-M6-V5y"/>
+                            <constraint firstItem="aDF-pZ-AV4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="pjB-Ma-VfX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="responseView" destination="alf-5X-Sph" id="sPY-Hr-hfQ"/>
+                        <outlet property="textField" destination="aDF-pZ-AV4" id="Qq3-jB-qQF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
