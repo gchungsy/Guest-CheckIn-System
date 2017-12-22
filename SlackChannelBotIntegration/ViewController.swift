@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     //MARK: - Properties
     @IBOutlet weak var photo: UIImageView!
     
-    @IBOutlet weak var guestName: UITextField!
+    @IBOutlet weak var guestName: TextFieldEffects!
     @IBOutlet weak var responseView: UITextView!
     
     @IBOutlet weak var chooseReasonButton: UIButton!
@@ -25,10 +25,6 @@ class ViewController: UIViewController {
     var userName: String?
     var botID: String?
     var channelID: String?
-    
-    var guestname: String?
-    var hostname: String?
-    var reason: String?
     
     //MARK: - DropDown's
     
@@ -49,13 +45,8 @@ class ViewController: UIViewController {
     @IBAction func choose(_ sender: AnyObject) {
         chooseReasonDropDown.show()
     }
-    @IBAction func sendGuestInfo(_ sender: UIButton) {
-        
-        var message = "Hey \(hostname)! \(guestName) is here for you at the front desk. Reason for visit: \(reason)"
-        
-        //SocketAPI.shared.sendMessage(id: 2323, type: "message", channelID: channelID ?? "", text: message ?? "")
-        
-    }
+    
+    //MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,12 +59,23 @@ class ViewController: UIViewController {
             self.setupChannel()
             self.setupDropDowns()
         }
-        guestName.delegate = self
+        
 
+        // ImageView
         photo.layer.borderWidth = 1
+        photo.layer.borderColor = UIColor.clear.cgColor
         photo.layer.masksToBounds = false
         photo.layer.cornerRadius = photo.frame.height/2
         photo.clipsToBounds = true
+        
+        // TextField
+        //guestName.delegate = self
+        //guestName.setPadding()
+        //guestName.setBottomBorder()
+        //guestName.font = UIFont(name: "Helvetica", size: 14)!
+        
+        // Label
+        
         
     }
     
@@ -112,7 +114,6 @@ class ViewController: UIViewController {
         // Action triggered on selection
         chooseReasonDropDown.selectionAction = { [weak self] (index, item) in
             self?.chooseReasonButton.setTitle(item, for: .normal)
-            self?.reason = item
         }
     }
     
@@ -140,7 +141,6 @@ class ViewController: UIViewController {
         // Action triggered on selection
         chooseHostDropDown.selectionAction = { [weak self] (index, item) in
             self?.chooseHostButton.setTitle(item, for: .normal)
-            self?.hostname = item
         }
         
         chooseHostDropDown.multiSelectionAction = { [weak self] (indices, items) in
@@ -150,28 +150,35 @@ class ViewController: UIViewController {
             }
 //            else
 //            {
-//                for host in host_names {
-//                    self?.hostname?.append("\(host) ")
-//                }
-//
-//                self?.chooseHostButton.setTitle("\(self?.hostname)", for: .normal)
+//                self?.chooseHostButton.setTitle("\(items)", for: .normal)
 //            }
         }
+        
+        // Action triggered on dropdown cancelation (hide)
+        //        dropDown.cancelAction = { [unowned self] in
+        //            // You could for example deselect the selected item
+        //            self.dropDown.deselectRowAtIndexPath(self.dropDown.indexForSelectedRow)
+        //            self.actionButton.setTitle("Canceled", forState: .Normal)
+        //        }
+        
+        // You can manually select a row if needed
+        //        dropDown.selectRowAtIndex(3)
     }
     
     func setUpCustomizeDropDown(_ sender: AnyObject) {
         let appearance = DropDown.appearance()
         
-        appearance.cellHeight = 60
+        appearance.cellHeight = 40
         appearance.backgroundColor = UIColor(white: 1, alpha: 1)
         appearance.selectionBackgroundColor = UIColor(red: 0.6494, green: 0.8155, blue: 1.0, alpha: 0.2)
         //        appearance.separatorColor = UIColor(white: 0.7, alpha: 0.8)
         appearance.cornerRadius = 10
-        appearance.shadowColor = UIColor(white: 0.6, alpha: 1)
-        appearance.shadowOpacity = 0.9
-        appearance.shadowRadius = 25
+        //appearance.shadowColor = UIColor(white: 0.6, alpha: 1)
+        //appearance.shadowOpacity = 0.9
+        //appearance.shadowRadius = 25
         appearance.animationduration = 0.25
         appearance.textColor = .darkGray
+        appearance.textFont = UIFont(name: "Helvetica", size: 14)!
     }
     
   
@@ -235,8 +242,7 @@ extension ViewController {
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        guestname = textField.text ?? ""
-        //SocketAPI.shared.sendMessage(id: 2323, type: "message", channelID: channelID ?? "", text: textField.text ?? "")
+        SocketAPI.shared.sendMessage(id: 2323, type: "message", channelID: channelID ?? "", text: textField.text ?? "")
         return true
     }
 }
@@ -255,4 +261,30 @@ extension ViewController: SocketDelegate {
     }
 }
 
+//
+//extension UITextField {
+//
+//    func setPadding() {
+//        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: self.frame.height))
+//        self.leftView = paddingView
+//        self.leftViewMode = .always
+//    }
+//
+//    func setBottomBorder() {
+//        self.layer.shadowColor = UIColor.darkGray.cgColor
+//        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+//        self.layer.shadowOpacity = 1.0
+//        self.layer.shadowRadius = 0.0
+//    }
+//}
+//
+////extension UILabel {
+////
+////    func setBottomBorder() {
+////        self.layer.shadowColor = UIColor.darkGray.cgColor
+////        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+////        self.layer.shadowOpacity = 1.0
+////        self.layer.shadowRadius = 0.0
+////    }
+////}
 
