@@ -25,6 +25,8 @@ class SlackAPI: NSObject {
     func rtm_start(completion: @escaping (String, String) -> Void)
     {
         var botID: String?
+        var usr: User?
+        var company = Company()
         Alamofire.request(Slack.URL.rtm.start, method: .get, parameters: [Slack.param.token: Slack.token.bot] as [String : Any], encoding: URLEncoding.default).responseJSON {
             response in
             
@@ -35,20 +37,13 @@ class SlackAPI: NSObject {
             }
             
             let json = JSON(response.data ?? Data());
-            
+            print("==================================================")
             print(json);
             
             if let users = json[Slack.param.users].array
             {
                 for user in users
                 {
-                    // Figure out user ID of bot
-                    if user[Slack.param.name].string != nil && user[Slack.param.name].stringValue == Slack.misc.bot_name
-                    {
-                        botID = user[Slack.param.id].string ?? ""
-                        print("BotID: ", user[Slack.param.id].string ?? "")
-                    }
-                    
                     // Store user data in RSMessageCenterAPI for later reference
                     var user_data = [String: AnyObject]();
                     
@@ -60,10 +55,43 @@ class SlackAPI: NSObject {
                         user_data[Slack.param.color] = color as AnyObject;
                         user_data[Slack.param.image] = image as AnyObject;
                         print("UserData: ", user_data)
+                        if(user[Slack.param.name].stringValue == Slack.misc.bot_name) {
+                            if let image_url =  user_data["image"] {
+                                let url = URL(string:image_url as! String)
+                                if let data = try? Data(contentsOf: url!) {
+                                    company.changeImage(Image: UIImage(data: data)!)
+                                }
+                            }
+                        }
                     }
+                    
+                    // Figure out all user names
+                    if user[Slack.param.name].string != nil && user[Slack.param.name].stringValue != Slack.misc.bot_name
+                    {
+                        if user[Slack.param.name].stringValue != Slack.misc.slack_bot_name
+                        {
+                            var name = user[Slack.param.name].string ?? ""
+                            var realname = user[Slack.param.realname].string ?? ""
+                            var email = user[Slack.param.profile][Slack.param.email].string ?? ""
+                        
+                            print("User_Name: ", user[Slack.param.name].string ?? "")
+                            print("User_RealName: ", user[Slack.param.realname].string ?? "")
+                            print("User_Email: ", user[Slack.param.email].string ?? "")
+                            
+                            company.addUser(newUser: User(Name: name, RealName: realname, Email: email))
+                        }
+                    }
+                    
+                    // Figure out user ID of bot
+                    if user[Slack.param.name].string != nil && user[Slack.param.name].stringValue == Slack.misc.bot_name
+                    {
+                        botID = user[Slack.param.id].string ?? ""
+                        print("BotID: ", user[Slack.param.id].string ?? "")
+                    }
+                    
                 }
             }
-            
+            print("==================================================")
             // Get websocket URL and call completion closure
             if let url = json[Slack.param.url].string
             {

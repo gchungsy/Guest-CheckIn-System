@@ -25,7 +25,7 @@ class ViewController: UIViewController {
             self.botID = botID
             SocketAPI.shared.connect(url: URL(string: webSocketURl)!)
             SocketAPI.shared.delegate = self
-//            SlackAPI.sharedInstance.getChannelList()
+            SlackAPI.sharedInstance.getChannelList()
             self.setupChannel()
         }
         textField.delegate = self

@@ -9,16 +9,17 @@
 import Foundation
 
 enum SlackID: String {
-    case botUser = "dummy-bot"
-    case botToken = "xoxb-SLACK_GENERATED_ID"
+    case botUser = "visitbot"
+    case botToken = "xoxb-289705148019-9aQPnm7Ymdg4BX79xt1u0RZ3"
     
-    case slackExampleClientID = "SLACK_GENERATED_ID"
-    case slackExampleSecret = "SLACK_GENERATED_SECRET"
-    case slackExampleVerificationToken = "SLACK_GENERATED_VERIFICATION_TOKEN"
-    case slackExampleID = "xoxp-SLACK_GENERATED_ID"
+    case slackExampleClientID = "289779861170.289816630292"
+    case slackExampleSecret = "0d17e886d05b88f484dc072dbc1b12d1"
+    case slackExampleVerificationToken = "X30UOnHxTTxjy3MY6jbTESw8"
+    case slackExampleID = "xoxp-289779861170-289260365345-290846864855-4408c3e8c9fbfb96df75c319956d1e3b"
 }
 
 struct Slack {
+    
     /// Slack HTTPS API URLs
     struct URL {
         struct rtm {
@@ -39,6 +40,8 @@ struct Slack {
         static let url = "url";
         static let channels = "channels";
         static let name = "name";
+        static let realname = "real_name";
+        static let email = "email";
         static let channel = "channel";
         static let id = "id";
         static let type = "type";
@@ -67,6 +70,7 @@ struct Slack {
     struct misc {
         static let usernames = ["arthur", "ford", "trillian", "zaphod", "marvin", "eddie", "hamma-kavula", "slartibartfast", "deep-thought", "agrajag", "vogon-jeltz"];
         static let bot_name = SlackID.botUser.rawValue
+        static let slack_bot_name = "slackbot"
     }
 }
 
@@ -81,3 +85,4 @@ struct MessageCenter {
         static let userTyping = "user_typing";
     }
 }
+
