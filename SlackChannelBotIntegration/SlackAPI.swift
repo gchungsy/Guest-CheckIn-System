@@ -79,6 +79,9 @@ class SlackAPI: NSObject {
                             print("User_Email: ", user[Slack.param.email].string ?? "")
                             
                             company.addUser(newUser: User(Name: name, RealName: realname, Email: email))
+                            
+                            host_names.append("\(realname) (\(name))")
+                            //employees.append(User(Name: name, RealName: realname, Email: email))
                         }
                     }
                     

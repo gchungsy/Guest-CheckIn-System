@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+var employees = [User]()
+var host_names = [String]()
+
 class Company {
     var logo : UIImage? // Slackbot icon
     var slack_channels : [String]

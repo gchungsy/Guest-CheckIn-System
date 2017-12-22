@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,52 +19,73 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDF-pZ-AV4">
-                                <rect key="frame" x="24" y="44" width="272" height="32"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cG1-8M-NHC">
+                                <rect key="frame" x="234" y="472" width="300" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDF-pZ-AV4">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="mFA-3a-o1v"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="send"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzp-bb-Plj">
+                                        <rect key="frame" x="0.0" y="21" width="300" height="30"/>
+                                        <connections>
+                                            <action selector="choose:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4nf-EJ-rj0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZpS-YG-c8A">
+                                        <rect key="frame" x="0.0" y="51" width="300" height="30"/>
+                                        <state key="normal" title="Choose Host"/>
+                                        <connections>
+                                            <action selector="chooseArticle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2gR-vU-8yk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ipad" translatesAutoresizingMaskIntoConstraints="NO" id="NfT-Yh-zwH">
+                                <rect key="frame" x="259" y="133" width="250" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="QRh-uL-n5k"/>
+                                    <constraint firstAttribute="height" constant="250" id="fN8-Fc-uI1"/>
+                                    <constraint firstAttribute="width" constant="250" id="xIB-pO-fxb"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="send"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Response and Recieved messages from Slack Channel" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alf-5X-Sph">
-                                <rect key="frame" x="0.0" y="156" width="320" height="412"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Response" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJa-f1-Yqn">
-                                <rect key="frame" x="24" y="119" width="85" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMg-6f-D65">
+                                <rect key="frame" x="360" y="775" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="sendGuestInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FtU-tR-Ez8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="alf-5X-Sph" secondAttribute="bottom" id="4Bg-AI-7Di"/>
-                            <constraint firstAttribute="trailing" secondItem="aDF-pZ-AV4" secondAttribute="trailing" constant="24" id="4gK-pb-3sY"/>
-                            <constraint firstItem="aDF-pZ-AV4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="24" id="7et-eo-3wM"/>
-                            <constraint firstAttribute="trailing" secondItem="alf-5X-Sph" secondAttribute="trailing" id="Cuq-dh-xLC"/>
-                            <constraint firstItem="alf-5X-Sph" firstAttribute="top" secondItem="MJa-f1-Yqn" secondAttribute="bottom" constant="16" id="LD2-6D-aNP"/>
-                            <constraint firstItem="alf-5X-Sph" firstAttribute="top" secondItem="aDF-pZ-AV4" secondAttribute="bottom" constant="80" id="UfU-AX-VZ9"/>
-                            <constraint firstItem="MJa-f1-Yqn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="24" id="nIq-tD-6eR"/>
-                            <constraint firstItem="alf-5X-Sph" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="o8g-M6-V5y"/>
-                            <constraint firstItem="aDF-pZ-AV4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="pjB-Ma-VfX"/>
+                            <constraint firstItem="NfT-Yh-zwH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="239" id="0bq-vd-rZE"/>
+                            <constraint firstItem="NfT-Yh-zwH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="113" id="nJe-yq-h1q"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="responseView" destination="alf-5X-Sph" id="sPY-Hr-hfQ"/>
-                        <outlet property="textField" destination="aDF-pZ-AV4" id="Qq3-jB-qQF"/>
+                        <outlet property="chooseHostButton" destination="ZpS-YG-c8A" id="NFw-cU-ER2"/>
+                        <outlet property="chooseReasonButton" destination="Gzp-bb-Plj" id="U2I-HK-MeG"/>
+                        <outlet property="guestName" destination="aDF-pZ-AV4" id="Qq3-jB-qQF"/>
+                        <outlet property="photo" destination="NfT-Yh-zwH" id="pDb-mA-3kX"/>
+                        <outlet property="sendGuestInfo" destination="DMg-6f-D65" id="2hI-Pu-w0g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+            <point key="canvasLocation" x="115.625" y="122.46093749999999"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Ipad" width="76" height="76"/>
+    </resources>
 </document>
