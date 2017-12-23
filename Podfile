@@ -9,6 +9,7 @@ pod 'Alamofire', '~> 4.3'
 pod 'SwiftyJSON'
 pod 'Starscream'
 
+pod 'RSSelectionMenu'
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
