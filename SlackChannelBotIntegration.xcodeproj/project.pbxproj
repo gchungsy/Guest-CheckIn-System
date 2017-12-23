@@ -11,7 +11,6 @@
 		402F37941FEC77A20014467B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402F37931FEC77A20014467B /* User.swift */; };
 		40EFE6E11FEDBA0B006DAC9A /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EFE6D51FEDBA09006DAC9A /* IsaoTextField.swift */; };
 		40EFE6E21FEDBA0B006DAC9A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40EFE6D61FEDBA0A006DAC9A /* Info.plist */; };
-		40EFE6E31FEDBA0B006DAC9A /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EFE6D71FEDBA0A006DAC9A /* HoshiTextField.swift */; };
 		40EFE6E41FEDBA0B006DAC9A /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EFE6D81FEDBA0A006DAC9A /* TextFieldEffects.swift */; };
 		9D124BF11FA49B2C003A8B3B /* SlackConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D124BF01FA49B2C003A8B3B /* SlackConstants.swift */; };
 		9D2965A31FA6F38D0070F9B2 /* SlackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2965A21FA6F38D0070F9B2 /* SlackAPI.swift */; };
@@ -49,7 +48,6 @@
 		402F37931FEC77A20014467B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		40EFE6D51FEDBA09006DAC9A /* IsaoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsaoTextField.swift; sourceTree = "<group>"; };
 		40EFE6D61FEDBA0A006DAC9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40EFE6D71FEDBA0A006DAC9A /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
 		40EFE6D81FEDBA0A006DAC9A /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
 		40EFE6DB1FEDBA0B006DAC9A /* TextFieldEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEffects.h; sourceTree = "<group>"; };
 		42C7E8268D5E10B86B841E5F /* Pods-SlackChannelBotIntegrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackChannelBotIntegrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlackChannelBotIntegrationTests/Pods-SlackChannelBotIntegrationTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				40EFE6D51FEDBA09006DAC9A /* IsaoTextField.swift */,
-				40EFE6D71FEDBA0A006DAC9A /* HoshiTextField.swift */,
 				40EFE6DB1FEDBA0B006DAC9A /* TextFieldEffects.h */,
 				40EFE6D81FEDBA0A006DAC9A /* TextFieldEffects.swift */,
 				40EFE6D61FEDBA0A006DAC9A /* Info.plist */,
@@ -515,7 +512,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40EFE6E31FEDBA0B006DAC9A /* HoshiTextField.swift in Sources */,
 				9D2965A51FA6F57E0070F9B2 /* SocketAPI.swift in Sources */,
 				40EFE6E41FEDBA0B006DAC9A /* TextFieldEffects.swift in Sources */,
 				9DD1B11F1FA44F0200226733 /* ViewController.swift in Sources */,

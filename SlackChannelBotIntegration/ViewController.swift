@@ -9,18 +9,23 @@
 import UIKit
 import SwiftyJSON
 import DropDown
+import SKWebAPI
+import RSSelectionMenu
 
 class ViewController: UIViewController {
     
     //MARK: - Properties
     @IBOutlet weak var photo: UIImageView!
     
-    @IBOutlet weak var guestName: TextFieldEffects!
+    @IBOutlet weak var guestField: TextFieldEffects!
     @IBOutlet weak var responseView: UITextView!
+    @IBOutlet weak var reasonField: IsaoTextField!
     
+    @IBOutlet weak var hostField: IsaoTextField!
     @IBOutlet weak var chooseReasonButton: UIButton!
     @IBOutlet weak var chooseHostButton: UIButton!
     
+    @IBOutlet weak var submitButton: UIButton!
     var socketURL: String?
     var userName: String?
     var botID: String?
@@ -44,6 +49,10 @@ class ViewController: UIViewController {
     
     @IBAction func choose(_ sender: AnyObject) {
         chooseReasonDropDown.show()
+    }
+    
+    @IBAction func didTapSubmitButton(_ sender: UIButton) {
+        
     }
     
     //MARK: - LifeCycle
@@ -74,7 +83,15 @@ class ViewController: UIViewController {
         //guestName.setBottomBorder()
         //guestName.font = UIFont(name: "Helvetica", size: 14)!
         
-        // Label
+        hostField.isUserInteractionEnabled = false
+        reasonField.isUserInteractionEnabled = false
+        
+        // Button
+        submitButton.layer.borderWidth = 1
+        submitButton.layer.borderColor = UIColor.lightGray.cgColor
+        submitButton.layer.masksToBounds = false
+        submitButton.layer.cornerRadius = 30
+        submitButton.clipsToBounds = true
         
         
     }
@@ -84,7 +101,7 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guestName.resignFirstResponder()
+        guestField.resignFirstResponder()
     }
     
     //MARK: - Setup

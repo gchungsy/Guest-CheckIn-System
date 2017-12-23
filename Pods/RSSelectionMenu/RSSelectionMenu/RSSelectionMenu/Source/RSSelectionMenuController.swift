@@ -323,7 +323,7 @@ extension RSSelectionMenu {
             }
             
             navigationItem.title = theme.title
-            navigationBar.titleTextAttributes = theme.attributes
+            navigationBar.titleTextAttributes = theme.attributes as! [String : Any]
         }
     }
 }

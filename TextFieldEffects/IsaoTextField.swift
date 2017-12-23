@@ -58,9 +58,9 @@ import UIKit
         }
     }
     
-    private let borderThickness: (active: CGFloat, inactive: CGFloat) = (4, 2)
-    private let placeholderInsets = CGPoint(x: 6, y: 6)
-    private let textFieldInsets = CGPoint(x: 6, y: 6)
+    private let borderThickness: (active: CGFloat, inactive: CGFloat) = (2, 2)
+    private let placeholderInsets = CGPoint(x: 6, y: 0)
+    private let textFieldInsets = CGPoint(x: 6, y: 2)
     private let borderLayer = CALayer()
     
     // MARK: - TextFieldEffects
@@ -101,7 +101,7 @@ import UIKit
     
     private func updatePlaceholder() {
         placeholderLabel.text = placeholder
-        placeholderLabel.textColor = inactiveColor
+        placeholderLabel.textColor = UIColor.lightGray
         placeholderLabel.sizeToFit()
         layoutPlaceholderInTextRect()
         
