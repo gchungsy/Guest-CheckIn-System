@@ -51,6 +51,9 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - RSFloatInputView (1.0.0)
+  - SKCore (4.0.4)
+  - SKWebAPI (4.0.7):
+    - SKCore
   - Starscream (2.1.0)
   - SwiftyJSON (3.1.4)
 
@@ -62,6 +65,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - RSFloatInputView
+  - SKWebAPI
   - Starscream
   - SwiftyJSON
 
@@ -80,9 +84,11 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   RSFloatInputView: fea19c7b6c1228047379ee38ca9bca9e9d5a0fd6
+  SKCore: 47f7643fc82ed78fc1954350347dcb2811990812
+  SKWebAPI: a8538700c992fd11be1914a0859ac572b3aea756
   Starscream: 168fd64c345fb2dea71b0a869c482aeffcf866e4
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: f85f278efe700514cd4cb3cda902fea5e2cfbe89
+PODFILE CHECKSUM: 1846f00cbac3545259b7d5dcc7ae5154d636df31
 
 COCOAPODS: 1.3.1

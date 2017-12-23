@@ -16,6 +16,8 @@ pod 'Firebase/Storage'
 pod 'DropDown'
 pod ‘RSFloatInputView’
 
+pod 'SKWebAPI'
+
   target 'SlackChannelBotIntegrationTests' do
     inherit! :search_paths
     # Pods for testing
