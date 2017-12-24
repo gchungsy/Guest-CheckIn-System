@@ -2,9 +2,7 @@
 //  ViewController.swift
 //  SlackChannelBotIntegration
 //
-//  Created by Sierra 2 on 28/10/17.
-//  Copyright © 2017 SandsHellCreations. All rights reserved.
-//
+//  Created by Gary Chung on 20/12/17.
 
 import UIKit
 import SwiftyJSON
@@ -18,14 +16,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var photo: UIImageView!
     
     @IBOutlet weak var guestField: TextFieldEffects!
-    @IBOutlet weak var responseView: UITextView!
     @IBOutlet weak var reasonField: IsaoTextField!
-    
     @IBOutlet weak var hostField: IsaoTextField!
+    
     @IBOutlet weak var chooseReasonButton: UIButton!
     @IBOutlet weak var chooseHostButton: UIButton!
-    
     @IBOutlet weak var submitButton: UIButton!
+    
     var socketURL: String?
     var userName: String?
     var botID: String?
@@ -36,7 +33,6 @@ class ViewController: UIViewController {
     
     let dataArray = ["Sachin Tendulkar", "Rahul Dravid", "Saurav Ganguli", "Virat Kohli", "Suresh Raina", "Ravindra Jadeja", "Chris Gyle", "Steve Smith", "Anil Kumble"]
     var selectedDataArray = [String]()
-    
     
     //MARK: - DropDown's
 
@@ -58,8 +54,6 @@ class ViewController: UIViewController {
     
     @IBAction func didTapSubmitButton(_ sender: UIButton) {
         
-
-    
         let webAPI = WebAPI(token: "xoxp-289779861170-289260365345-290797256836-10ef463e6958e8c9cf4785b2ab79668b")
         webAPI.authenticationTest(success: { (success) in
             print("-----------------------------------------------------")
@@ -109,9 +103,7 @@ class ViewController: UIViewController {
             })
             
             
-            
             var webhookbot = Slackbot(url: "https://hooks.slack.com/services/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")
-            
             
             webhookbot.botname = "information_desk"
             webhookbot.icon = ":information_desk_person:" //https://www.webpagefx.com/tools/emoji-cheat-sheet/
@@ -129,17 +121,32 @@ class ViewController: UIViewController {
             
             webhookbot.sendSideBySideMessage(fallback: "New Side by Side Message", pretext: pretext, fields: fields)
             
-            
-            
-            webhookbot.sendMessage(message: "This is posted to #test and comes from a bot named webhookbot.")
-            
-            
-            
-            
-            
         }, failure: nil)
         
         
+    }
+    
+    func clearUserFields() {
+        
+        guard let text = guestField.text, !text.isEmpty else {
+            return // return false, already empty
+        }
+        guestField.text = ""
+        
+        //examine the size of the image if find out if user have uploaded their own photo
+        //sizeOfUIImage()
+        //if chooseReasonButton.Title(for: .normal) == "" { }
+    }
+    
+    func sizeOfUIImage() {
+      if let data = UIImagePNGRepresentation(#imageLiteral(resourceName: "VanGogh.jpg")) as Data? {
+      print("There were \(data.count) bytes")
+      let bcf = ByteCountFormatter()
+      bcf.allowedUnits = [.useMB] // optional: restricts the units to MB only
+      bcf.countStyle = .file
+      let string = bcf.string(fromByteCount: Int64(data.count))
+      print("formatted result: \(string)")
+      }
     }
     
     //MARK: - LifeCycle
@@ -156,7 +163,6 @@ class ViewController: UIViewController {
             self.setupDropDowns()
         }
         
-
         // ImageView
         photo.layer.borderWidth = 1
         photo.layer.borderColor = UIColor.clear.cgColor
@@ -180,7 +186,6 @@ class ViewController: UIViewController {
         submitButton.layer.cornerRadius = 30
         submitButton.clipsToBounds = true
         
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -196,13 +201,11 @@ class ViewController: UIViewController {
     func showAsPopover(_ sender: UIView) {
         
         // Show as Popover with datasource
-        
         let selectionMenu = RSSelectionMenu(dataSource: simpleDataArray) { (cell, object, indexPath) in
             cell.textLabel?.text = object
         }
         
         selectionMenu.setSelectedItems(items: simpleSelectedArray) { (text, isSelected, selectedItems) in
-            
             // update your existing array with updated selected items, so when menu presents second time updated items will be default selected.
             self.simpleSelectedArray = selectedItems
         }
@@ -210,15 +213,12 @@ class ViewController: UIViewController {
         // show as popover
         // Here specify popover sourceView and size of popover
         // specifying nil will present with default size
-        
         selectionMenu.show(style: .Popover(sourceView: sender, size: nil), from: self)
     }
-    
     
     func showAsFormSheetWithSearch() {
         
         // Show menu with datasource array - PresentationStyle = Formsheet & SearchBar
-        
         let selectionMenu = RSSelectionMenu(dataSource: dataArray) { (cell, object, indexPath) in
             cell.textLabel?.text = object
         }
@@ -230,22 +230,16 @@ class ViewController: UIViewController {
         
         // show searchbar with placeholder text and barTintColor
         // Here you'll get search text - when user types in seachbar
-        
         selectionMenu.showSearchBar(withPlaceHolder: "Search Player", tintColor: UIColor.white.withAlphaComponent(0.3)) { (searchText) -> ([String]) in
             
             // return filtered array based on any condition
             // here let's return array where firstname starts with specified search text
-            
             return self.dataArray.filter({ $0.lowercased().hasPrefix(searchText.lowercased()) })
         }
         
         // show as formsheet
         selectionMenu.show(style: .Formsheet, from: self)
     }
-    
-    
-    
-    
     
     func setupDropDowns() {
         setupChooseReasonDropDown()
@@ -273,7 +267,6 @@ class ViewController: UIViewController {
             self?.chooseReasonButton.setTitle(item, for: .normal)
         }
     }
-    
     
     func setUpCustomizeDropDown(_ sender: AnyObject) {
         let appearance = DropDown.appearance()
@@ -371,30 +364,71 @@ extension ViewController: SocketDelegate {
     }
 }
 
-//
-//extension UITextField {
-//
-//    func setPadding() {
-//        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: self.frame.height))
-//        self.leftView = paddingView
-//        self.leftViewMode = .always
-//    }
-//
-//    func setBottomBorder() {
-//        self.layer.shadowColor = UIColor.darkGray.cgColor
-//        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
-//        self.layer.shadowOpacity = 1.0
-//        self.layer.shadowRadius = 0.0
-//    }
-//}
-//
-////extension UILabel {
-////
-////    func setBottomBorder() {
-////        self.layer.shadowColor = UIColor.darkGray.cgColor
-////        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
-////        self.layer.shadowOpacity = 1.0
-////        self.layer.shadowRadius = 0.0
-////    }
-////}
+  // MARK: - Image Picker
+  @IBAction func didTapTakePicture(_: AnyObject) {
+    let picker = UIImagePickerController()
+    picker.delegate = self
+    if UIImagePickerController.isSourceTypeAvailable(.camera) {
+      picker.sourceType = .camera
+    } else {
+      picker.sourceType = .photoLibrary
+    }
+
+    present(picker, animated: true, completion:nil)
+  }
+
+  func imagePickerController(_ picker: UIImagePickerController,
+    didFinishPickingMediaWithInfo info: [String : Any]) {
+      picker.dismiss(animated: true, completion:nil)
+
+    urlTextView.text = "Beginning Upload"
+    // if it's a photo from the library, not an image from the camera
+    if #available(iOS 8.0, *), let referenceUrl = info[UIImagePickerControllerReferenceURL] as? URL {
+      let assets = PHAsset.fetchAssets(withALAssetURLs: [referenceUrl], options: nil)
+      let asset = assets.firstObject
+      asset?.requestContentEditingInput(with: nil, completionHandler: { (contentEditingInput, info) in
+        let imageFile = contentEditingInput?.fullSizeImageURL
+        let filePath = Auth.auth().currentUser!.uid +
+          "/\(Int(Date.timeIntervalSinceReferenceDate * 1000))/\(imageFile!.lastPathComponent)"
+        // [START uploadimage]
+        self.storageRef.child(filePath)
+          .putFile(from: imageFile!, metadata: nil) { (metadata, error) in
+            if let error = error {
+              print("Error uploading: \(error)")
+              self.urlTextView.text = "Upload Failed"
+              return
+            }
+            self.uploadSuccess(metadata!, storagePath: filePath)
+        }
+        // [END uploadimage]
+      })
+    } else {
+      guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
+      guard let imageData = UIImageJPEGRepresentation(image, 0.8) else { return }
+      let imagePath = Auth.auth().currentUser!.uid +
+        "/\(Int(Date.timeIntervalSinceReferenceDate * 1000)).jpg"
+      let metadata = StorageMetadata()
+      metadata.contentType = "image/jpeg"
+      self.storageRef.child(imagePath).putData(imageData, metadata: metadata) { (metadata, error) in
+        if let error = error {
+          print("Error uploading: \(error)")
+          self.urlTextView.text = "Upload Failed"
+          return
+        }
+        self.uploadSuccess(metadata!, storagePath: imagePath)
+      }
+    }
+  }
+
+  func uploadSuccess(_ metadata: StorageMetadata, storagePath: String) {
+    print("Upload Succeeded!")
+    self.urlTextView.text = metadata.downloadURL()?.absoluteString
+    UserDefaults.standard.set(storagePath, forKey: "storagePath")
+    UserDefaults.standard.synchronize()
+    self.downloadPicButton.isEnabled = true
+  }
+
+  func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    picker.dismiss(animated: true, completion:nil)
+}
 
