@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 enum SlackID: String {
     case botUser = "visitbot"
     case botToken = "xoxb-289705148019-9aQPnm7Ymdg4BX79xt1u0RZ3"
@@ -44,6 +45,7 @@ struct Slack {
         static let channels = "channels";
         static let name = "name";
         static let realname = "real_name";
+        static let firstname = "first_name";
         static let email = "email";
         static let channel = "channel";
         static let id = "id";
@@ -74,6 +76,7 @@ struct Slack {
         static let usernames = ["arthur", "ford", "trillian", "zaphod", "marvin", "eddie", "hamma-kavula", "slartibartfast", "deep-thought", "agrajag", "vogon-jeltz"];
         static let bot_name = SlackID.botUser.rawValue
         static let slack_bot_name = "slackbot"
+        static let reasons_to_visit = ["Meeting", "Interview", "Vendor", "Friend or Family"]
     }
 }
 

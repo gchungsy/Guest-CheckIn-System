@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "maximus_preview1-.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "pni.png",
       "scale" : "2x"
     },
     {

@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-var arrayOfUsers = [User]()
 
 class Company {
     var logo : UIImage? // Slackbot icon
@@ -51,11 +50,13 @@ class Company {
 class User {
     var name: String
     var realname: String
+    var firstname: String
     var id: String
     
-    init(Name:String, RealName:String, ID:String) {
+    init(Name:String, RealName:String, FirstName: String, ID:String) {
         name = Name
         realname = RealName
+        firstname = FirstName
         id = ID
     }
 }

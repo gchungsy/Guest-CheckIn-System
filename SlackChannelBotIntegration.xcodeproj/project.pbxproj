@@ -10,9 +10,12 @@
 		36D6A1A3791180AD71E3FC0E /* Pods_SlackChannelBotIntegrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF07038867D019C525B76D4 /* Pods_SlackChannelBotIntegrationTests.framework */; };
 		40036D7E1FEF2C34007CBE80 /* Slackbot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40036D7D1FEF2C34007CBE80 /* Slackbot.swift */; };
 		402F37941FEC77A20014467B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402F37931FEC77A20014467B /* User.swift */; };
+		406BF8F11FF04F2600E87C1E /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406BF8F01FF04F2600E87C1E /* Reach.swift */; };
+		406BF8F51FF04F3900E87C1E /* UIViewController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 406BF8F31FF04F3800E87C1E /* UIViewController+Alerts.m */; };
 		40EFE6E11FEDBA0B006DAC9A /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EFE6D51FEDBA09006DAC9A /* IsaoTextField.swift */; };
 		40EFE6E21FEDBA0B006DAC9A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40EFE6D61FEDBA0A006DAC9A /* Info.plist */; };
 		40EFE6E41FEDBA0B006DAC9A /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EFE6D81FEDBA0A006DAC9A /* TextFieldEffects.swift */; };
+		40F7D8121FF0366100D17776 /* ImageUploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F7D8111FF0366100D17776 /* ImageUploadManager.swift */; };
 		9D124BF11FA49B2C003A8B3B /* SlackConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D124BF01FA49B2C003A8B3B /* SlackConstants.swift */; };
 		9D2965A31FA6F38D0070F9B2 /* SlackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2965A21FA6F38D0070F9B2 /* SlackAPI.swift */; };
 		9D2965A51FA6F57E0070F9B2 /* SocketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2965A41FA6F57E0070F9B2 /* SocketAPI.swift */; };
@@ -48,10 +51,15 @@
 		1D39AFC1267F0424779E3FE5 /* Pods-SlackChannelBotIntegration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackChannelBotIntegration.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlackChannelBotIntegration/Pods-SlackChannelBotIntegration.release.xcconfig"; sourceTree = "<group>"; };
 		40036D7D1FEF2C34007CBE80 /* Slackbot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slackbot.swift; sourceTree = "<group>"; };
 		402F37931FEC77A20014467B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		406BF8F01FF04F2600E87C1E /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
+		406BF8F21FF04F3700E87C1E /* SlackChannelBotIntegration-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SlackChannelBotIntegration-Bridging-Header.h"; sourceTree = "<group>"; };
+		406BF8F31FF04F3800E87C1E /* UIViewController+Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alerts.m"; sourceTree = "<group>"; };
+		406BF8F41FF04F3900E87C1E /* UIViewController+Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alerts.h"; sourceTree = "<group>"; };
 		40EFE6D51FEDBA09006DAC9A /* IsaoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsaoTextField.swift; sourceTree = "<group>"; };
 		40EFE6D61FEDBA0A006DAC9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40EFE6D81FEDBA0A006DAC9A /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
 		40EFE6DB1FEDBA0B006DAC9A /* TextFieldEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEffects.h; sourceTree = "<group>"; };
+		40F7D8111FF0366100D17776 /* ImageUploadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadManager.swift; sourceTree = "<group>"; };
 		42C7E8268D5E10B86B841E5F /* Pods-SlackChannelBotIntegrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackChannelBotIntegrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlackChannelBotIntegrationTests/Pods-SlackChannelBotIntegrationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		77603502A70097D112AE7DB0 /* Pods-SlackChannelBotIntegrationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackChannelBotIntegrationUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlackChannelBotIntegrationUITests/Pods-SlackChannelBotIntegrationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D8FA9395BC97242900FA8FA /* Pods-SlackChannelBotIntegrationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackChannelBotIntegrationUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlackChannelBotIntegrationUITests/Pods-SlackChannelBotIntegrationUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +162,11 @@
 				9D2965A41FA6F57E0070F9B2 /* SocketAPI.swift */,
 				402F37931FEC77A20014467B /* User.swift */,
 				40036D7D1FEF2C34007CBE80 /* Slackbot.swift */,
+				40F7D8111FF0366100D17776 /* ImageUploadManager.swift */,
+				406BF8F01FF04F2600E87C1E /* Reach.swift */,
+				406BF8F41FF04F3900E87C1E /* UIViewController+Alerts.h */,
+				406BF8F31FF04F3800E87C1E /* UIViewController+Alerts.m */,
+				406BF8F21FF04F3700E87C1E /* SlackChannelBotIntegration-Bridging-Header.h */,
 			);
 			path = SlackChannelBotIntegration;
 			sourceTree = "<group>";
@@ -276,6 +289,7 @@
 				TargetAttributes = {
 					9DD1B1181FA44F0200226733 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					9DD1B12C1FA44F0300226733 = {
@@ -518,11 +532,14 @@
 				9D2965A51FA6F57E0070F9B2 /* SocketAPI.swift in Sources */,
 				40EFE6E41FEDBA0B006DAC9A /* TextFieldEffects.swift in Sources */,
 				9DD1B11F1FA44F0200226733 /* ViewController.swift in Sources */,
+				406BF8F51FF04F3900E87C1E /* UIViewController+Alerts.m in Sources */,
 				40036D7E1FEF2C34007CBE80 /* Slackbot.swift in Sources */,
+				40F7D8121FF0366100D17776 /* ImageUploadManager.swift in Sources */,
 				402F37941FEC77A20014467B /* User.swift in Sources */,
 				9D2965A31FA6F38D0070F9B2 /* SlackAPI.swift in Sources */,
 				9D124BF11FA49B2C003A8B3B /* SlackConstants.swift in Sources */,
 				9DD1B11D1FA44F0200226733 /* AppDelegate.swift in Sources */,
+				406BF8F11FF04F2600E87C1E /* Reach.swift in Sources */,
 				40EFE6E11FEDBA0B006DAC9A /* IsaoTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -678,11 +695,14 @@
 			baseConfigurationReference = CDB5A7784065CD20B9AC5293 /* Pods-SlackChannelBotIntegration.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SlackChannelBotIntegration/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gchungsy.guestCI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SlackChannelBotIntegration/SlackChannelBotIntegration-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -693,11 +713,13 @@
 			baseConfigurationReference = 1D39AFC1267F0424779E3FE5 /* Pods-SlackChannelBotIntegration.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SlackChannelBotIntegration/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gchungsy.guestCI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SlackChannelBotIntegration/SlackChannelBotIntegration-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};

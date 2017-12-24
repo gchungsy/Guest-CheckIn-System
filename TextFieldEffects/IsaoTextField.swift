@@ -59,8 +59,8 @@ import UIKit
     }
     
     private let borderThickness: (active: CGFloat, inactive: CGFloat) = (2, 2)
-    private let placeholderInsets = CGPoint(x: 6, y: 0)
-    private let textFieldInsets = CGPoint(x: 6, y: 2)
+    private let placeholderInsets = CGPoint(x: 6, y: 6)
+    private let textFieldInsets = CGPoint(x: 6, y: 3)
     private let borderLayer = CALayer()
     
     // MARK: - TextFieldEffects
@@ -166,6 +166,7 @@ import UIKit
         
     override open func editingRect(forBounds bounds: CGRect) -> CGRect {
         let newBounds = CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height - font!.lineHeight + textFieldInsets.y)
+        
         return newBounds.insetBy(dx: textFieldInsets.x, dy: 0)
     }
     
