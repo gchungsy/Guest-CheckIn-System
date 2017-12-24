@@ -72,15 +72,15 @@ class SlackAPI: NSObject {
                         {
                             var name = user[Slack.param.name].string ?? ""
                             var realname = user[Slack.param.realname].string ?? ""
-                            var email = user[Slack.param.profile][Slack.param.email].string ?? ""
+                            var id = user[Slack.param.profile][Slack.param.id].string ?? ""
                         
                             print("User_Name: ", user[Slack.param.name].string ?? "")
                             print("User_RealName: ", user[Slack.param.realname].string ?? "")
                             print("User_Email: ", user[Slack.param.email].string ?? "")
                             
-                            company.addUser(newUser: User(Name: name, RealName: realname, Email: email))
+                            //company.addUser(newUser: User(Name: name, RealName: realname, Id: id))
                             
-                            host_names.append("\(realname) (\(name))")
+                            //host_names.append("\(realname) (\(name))")
                             //employees.append(User(Name: name, RealName: realname, Email: email))
                         }
                     }

@@ -12,6 +12,9 @@ enum SlackID: String {
     case botUser = "visitbot"
     case botToken = "xoxb-289705148019-9aQPnm7Ymdg4BX79xt1u0RZ3"
     
+    case WebAPIToken = "xoxp-289779861170-289260365345-290797256836-10ef463e6958e8c9cf4785b2ab79668b"
+    case WebHookUrl = "https://hooks.slack.com/services/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"
+    
     case slackExampleClientID = "289779861170.289816630292"
     case slackExampleSecret = "0d17e886d05b88f484dc072dbc1b12d1"
     case slackExampleVerificationToken = "X30UOnHxTTxjy3MY6jbTESw8"

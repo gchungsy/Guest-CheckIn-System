@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		36D6A1A3791180AD71E3FC0E /* Pods_SlackChannelBotIntegrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF07038867D019C525B76D4 /* Pods_SlackChannelBotIntegrationTests.framework */; };
+		40036D7E1FEF2C34007CBE80 /* Slackbot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40036D7D1FEF2C34007CBE80 /* Slackbot.swift */; };
 		402F37941FEC77A20014467B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402F37931FEC77A20014467B /* User.swift */; };
 		40EFE6E11FEDBA0B006DAC9A /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EFE6D51FEDBA09006DAC9A /* IsaoTextField.swift */; };
 		40EFE6E21FEDBA0B006DAC9A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40EFE6D61FEDBA0A006DAC9A /* Info.plist */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		1D39AFC1267F0424779E3FE5 /* Pods-SlackChannelBotIntegration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackChannelBotIntegration.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlackChannelBotIntegration/Pods-SlackChannelBotIntegration.release.xcconfig"; sourceTree = "<group>"; };
+		40036D7D1FEF2C34007CBE80 /* Slackbot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slackbot.swift; sourceTree = "<group>"; };
 		402F37931FEC77A20014467B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		40EFE6D51FEDBA09006DAC9A /* IsaoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsaoTextField.swift; sourceTree = "<group>"; };
 		40EFE6D61FEDBA0A006DAC9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				9D2965A21FA6F38D0070F9B2 /* SlackAPI.swift */,
 				9D2965A41FA6F57E0070F9B2 /* SocketAPI.swift */,
 				402F37931FEC77A20014467B /* User.swift */,
+				40036D7D1FEF2C34007CBE80 /* Slackbot.swift */,
 			);
 			path = SlackChannelBotIntegration;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				9D2965A51FA6F57E0070F9B2 /* SocketAPI.swift in Sources */,
 				40EFE6E41FEDBA0B006DAC9A /* TextFieldEffects.swift in Sources */,
 				9DD1B11F1FA44F0200226733 /* ViewController.swift in Sources */,
+				40036D7E1FEF2C34007CBE80 /* Slackbot.swift in Sources */,
 				402F37941FEC77A20014467B /* User.swift in Sources */,
 				9D2965A31FA6F38D0070F9B2 /* SlackAPI.swift in Sources */,
 				9D124BF11FA49B2C003A8B3B /* SlackConstants.swift in Sources */,
