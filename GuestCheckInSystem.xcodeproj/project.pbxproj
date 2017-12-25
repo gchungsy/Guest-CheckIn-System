@@ -9,27 +9,27 @@
 /* Begin PBXBuildFile section */
 		40036D7E1FEF2C34007CBE80 /* Slackbot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40036D7D1FEF2C34007CBE80 /* Slackbot.swift */; };
 		402F37941FEC77A20014467B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402F37931FEC77A20014467B /* User.swift */; };
+		404B51EF1FF08D4200FC6384 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404B51EE1FF08D4200FC6384 /* UIColorExtension.swift */; };
 		406BF8F11FF04F2600E87C1E /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406BF8F01FF04F2600E87C1E /* Reach.swift */; };
 		406BF8F51FF04F3900E87C1E /* UIViewController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 406BF8F31FF04F3800E87C1E /* UIViewController+Alerts.m */; };
 		40EFE6E11FEDBA0B006DAC9A /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EFE6D51FEDBA09006DAC9A /* IsaoTextField.swift */; };
 		40EFE6E21FEDBA0B006DAC9A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40EFE6D61FEDBA0A006DAC9A /* Info.plist */; };
 		40EFE6E41FEDBA0B006DAC9A /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EFE6D81FEDBA0A006DAC9A /* TextFieldEffects.swift */; };
 		40F7D8121FF0366100D17776 /* ImageUploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F7D8111FF0366100D17776 /* ImageUploadManager.swift */; };
+		4FF8AB7F834C4B1EEE10C8F3 /* Pods_GuestCheckInSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CDAC1EC0A0A4B2E2AD692B /* Pods_GuestCheckInSystem.framework */; };
 		9D124BF11FA49B2C003A8B3B /* SlackConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D124BF01FA49B2C003A8B3B /* SlackConstants.swift */; };
-		9D2965A31FA6F38D0070F9B2 /* SlackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2965A21FA6F38D0070F9B2 /* SlackAPI.swift */; };
-		9D2965A51FA6F57E0070F9B2 /* SocketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2965A41FA6F57E0070F9B2 /* SocketAPI.swift */; };
 		9DD1B11D1FA44F0200226733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD1B11C1FA44F0200226733 /* AppDelegate.swift */; };
 		9DD1B11F1FA44F0200226733 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD1B11E1FA44F0200226733 /* ViewController.swift */; };
 		9DD1B1221FA44F0200226733 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DD1B1201FA44F0200226733 /* Main.storyboard */; };
 		9DD1B1241FA44F0200226733 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DD1B1231FA44F0200226733 /* Assets.xcassets */; };
 		9DD1B1271FA44F0200226733 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DD1B1251FA44F0200226733 /* LaunchScreen.storyboard */; };
-		A9A0CFDD42283B40694B4809 /* Pods_SlackChannelBotIntegration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4A0763796492B1303989BC /* Pods_SlackChannelBotIntegration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D39AFC1267F0424779E3FE5 /* Pods-SlackChannelBotIntegration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackChannelBotIntegration.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlackChannelBotIntegration/Pods-SlackChannelBotIntegration.release.xcconfig"; sourceTree = "<group>"; };
+		335DCCD9001B6025B7E15495 /* Pods-GuestCheckInSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuestCheckInSystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GuestCheckInSystem/Pods-GuestCheckInSystem.debug.xcconfig"; sourceTree = "<group>"; };
 		40036D7D1FEF2C34007CBE80 /* Slackbot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slackbot.swift; sourceTree = "<group>"; };
 		402F37931FEC77A20014467B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		404B51EE1FF08D4200FC6384 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		406BF8F01FF04F2600E87C1E /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		406BF8F21FF04F3700E87C1E /* SlackChannelBotIntegration-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SlackChannelBotIntegration-Bridging-Header.h"; sourceTree = "<group>"; };
 		406BF8F31FF04F3800E87C1E /* UIViewController+Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alerts.m"; sourceTree = "<group>"; };
@@ -39,13 +39,8 @@
 		40EFE6D81FEDBA0A006DAC9A /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
 		40EFE6DB1FEDBA0B006DAC9A /* TextFieldEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEffects.h; sourceTree = "<group>"; };
 		40F7D8111FF0366100D17776 /* ImageUploadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadManager.swift; sourceTree = "<group>"; };
-		42C7E8268D5E10B86B841E5F /* Pods-SlackChannelBotIntegrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackChannelBotIntegrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlackChannelBotIntegrationTests/Pods-SlackChannelBotIntegrationTests.debug.xcconfig"; sourceTree = "<group>"; };
-		77603502A70097D112AE7DB0 /* Pods-SlackChannelBotIntegrationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackChannelBotIntegrationUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlackChannelBotIntegrationUITests/Pods-SlackChannelBotIntegrationUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7D8FA9395BC97242900FA8FA /* Pods-SlackChannelBotIntegrationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackChannelBotIntegrationUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlackChannelBotIntegrationUITests/Pods-SlackChannelBotIntegrationUITests.release.xcconfig"; sourceTree = "<group>"; };
-		8C5D7FCC702EBFEF22C341FC /* Pods_SlackChannelBotIntegrationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlackChannelBotIntegrationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E18966BD0F1ED307EF0C968 /* Pods-GuestCheckInSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuestCheckInSystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuestCheckInSystem/Pods-GuestCheckInSystem.release.xcconfig"; sourceTree = "<group>"; };
 		9D124BF01FA49B2C003A8B3B /* SlackConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackConstants.swift; sourceTree = "<group>"; };
-		9D2965A21FA6F38D0070F9B2 /* SlackAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackAPI.swift; sourceTree = "<group>"; };
-		9D2965A41FA6F57E0070F9B2 /* SocketAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAPI.swift; sourceTree = "<group>"; };
 		9DD1B1191FA44F0200226733 /* GuestCheckInSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuestCheckInSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD1B11C1FA44F0200226733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DD1B11E1FA44F0200226733 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,10 +48,7 @@
 		9DD1B1231FA44F0200226733 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DD1B1261FA44F0200226733 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DD1B1281FA44F0200226733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD4A0763796492B1303989BC /* Pods_SlackChannelBotIntegration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlackChannelBotIntegration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDB5A7784065CD20B9AC5293 /* Pods-SlackChannelBotIntegration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackChannelBotIntegration.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlackChannelBotIntegration/Pods-SlackChannelBotIntegration.debug.xcconfig"; sourceTree = "<group>"; };
-		E2EA4196DD5EEEA0C3A7A8E6 /* Pods-SlackChannelBotIntegrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackChannelBotIntegrationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlackChannelBotIntegrationTests/Pods-SlackChannelBotIntegrationTests.release.xcconfig"; sourceTree = "<group>"; };
-		ECF07038867D019C525B76D4 /* Pods_SlackChannelBotIntegrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlackChannelBotIntegrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9CDAC1EC0A0A4B2E2AD692B /* Pods_GuestCheckInSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuestCheckInSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +56,67 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9A0CFDD42283B40694B4809 /* Pods_SlackChannelBotIntegration.framework in Frameworks */,
+				4FF8AB7F834C4B1EEE10C8F3 /* Pods_GuestCheckInSystem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		404B51F01FF0910100FC6384 /* Slack */ = {
+			isa = PBXGroup;
+			children = (
+				9D124BF01FA49B2C003A8B3B /* SlackConstants.swift */,
+				40036D7D1FEF2C34007CBE80 /* Slackbot.swift */,
+			);
+			path = Slack;
+			sourceTree = "<group>";
+		};
+		404B51F11FF0912700FC6384 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				402F37931FEC77A20014467B /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		404B51F21FF0913400FC6384 /* Supporting FIles */ = {
+			isa = PBXGroup;
+			children = (
+				40F7D8111FF0366100D17776 /* ImageUploadManager.swift */,
+				406BF8F01FF04F2600E87C1E /* Reach.swift */,
+				9DD1B11C1FA44F0200226733 /* AppDelegate.swift */,
+				406BF8F41FF04F3900E87C1E /* UIViewController+Alerts.h */,
+				406BF8F31FF04F3800E87C1E /* UIViewController+Alerts.m */,
+			);
+			path = "Supporting FIles";
+			sourceTree = "<group>";
+		};
+		404B51F31FF0914300FC6384 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				404B51EE1FF08D4200FC6384 /* UIColorExtension.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		404B51F41FF0916500FC6384 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9DD1B1201FA44F0200226733 /* Main.storyboard */,
+				9DD1B1251FA44F0200226733 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		404B51F51FF091B200FC6384 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9DD1B11E1FA44F0200226733 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		40EFE6EA1FEDBA48006DAC9A /* TextFieldEffects */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,14 +128,22 @@
 			path = TextFieldEffects;
 			sourceTree = "<group>";
 		};
+		87BD7DF28C2891C51906A82F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9CDAC1EC0A0A4B2E2AD692B /* Pods_GuestCheckInSystem.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9DD1B1101FA44F0200226733 = {
 			isa = PBXGroup;
 			children = (
 				9DD1B11B1FA44F0200226733 /* GuestCheckInSystem */,
 				9DD1B11A1FA44F0200226733 /* Products */,
 				40EFE6EA1FEDBA48006DAC9A /* TextFieldEffects */,
-				CB387470767D7D424065BF5E /* Pods */,
-				A16BEB4E435EB4D007CC28F2 /* Frameworks */,
+				EAF0BC5F8B28EFDBAFE77074 /* Pods */,
+				87BD7DF28C2891C51906A82F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,45 +158,24 @@
 		9DD1B11B1FA44F0200226733 /* GuestCheckInSystem */ = {
 			isa = PBXGroup;
 			children = (
-				9DD1B11C1FA44F0200226733 /* AppDelegate.swift */,
-				9DD1B11E1FA44F0200226733 /* ViewController.swift */,
-				9DD1B1201FA44F0200226733 /* Main.storyboard */,
+				404B51F51FF091B200FC6384 /* ViewController */,
+				404B51F41FF0916500FC6384 /* Storyboard */,
+				404B51F21FF0913400FC6384 /* Supporting FIles */,
+				404B51F11FF0912700FC6384 /* Model */,
+				404B51F01FF0910100FC6384 /* Slack */,
+				404B51F31FF0914300FC6384 /* Color */,
 				9DD1B1231FA44F0200226733 /* Assets.xcassets */,
-				9DD1B1251FA44F0200226733 /* LaunchScreen.storyboard */,
-				9DD1B1281FA44F0200226733 /* Info.plist */,
-				9D124BF01FA49B2C003A8B3B /* SlackConstants.swift */,
-				9D2965A21FA6F38D0070F9B2 /* SlackAPI.swift */,
-				9D2965A41FA6F57E0070F9B2 /* SocketAPI.swift */,
-				402F37931FEC77A20014467B /* User.swift */,
-				40036D7D1FEF2C34007CBE80 /* Slackbot.swift */,
-				40F7D8111FF0366100D17776 /* ImageUploadManager.swift */,
-				406BF8F01FF04F2600E87C1E /* Reach.swift */,
-				406BF8F41FF04F3900E87C1E /* UIViewController+Alerts.h */,
-				406BF8F31FF04F3800E87C1E /* UIViewController+Alerts.m */,
 				406BF8F21FF04F3700E87C1E /* SlackChannelBotIntegration-Bridging-Header.h */,
+				9DD1B1281FA44F0200226733 /* Info.plist */,
 			);
 			path = GuestCheckInSystem;
 			sourceTree = "<group>";
 		};
-		A16BEB4E435EB4D007CC28F2 /* Frameworks */ = {
+		EAF0BC5F8B28EFDBAFE77074 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CD4A0763796492B1303989BC /* Pods_SlackChannelBotIntegration.framework */,
-				ECF07038867D019C525B76D4 /* Pods_SlackChannelBotIntegrationTests.framework */,
-				8C5D7FCC702EBFEF22C341FC /* Pods_SlackChannelBotIntegrationUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CB387470767D7D424065BF5E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CDB5A7784065CD20B9AC5293 /* Pods-SlackChannelBotIntegration.debug.xcconfig */,
-				1D39AFC1267F0424779E3FE5 /* Pods-SlackChannelBotIntegration.release.xcconfig */,
-				42C7E8268D5E10B86B841E5F /* Pods-SlackChannelBotIntegrationTests.debug.xcconfig */,
-				E2EA4196DD5EEEA0C3A7A8E6 /* Pods-SlackChannelBotIntegrationTests.release.xcconfig */,
-				77603502A70097D112AE7DB0 /* Pods-SlackChannelBotIntegrationUITests.debug.xcconfig */,
-				7D8FA9395BC97242900FA8FA /* Pods-SlackChannelBotIntegrationUITests.release.xcconfig */,
+				335DCCD9001B6025B7E15495 /* Pods-GuestCheckInSystem.debug.xcconfig */,
+				7E18966BD0F1ED307EF0C968 /* Pods-GuestCheckInSystem.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -154,12 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DD1B1411FA44F0300226733 /* Build configuration list for PBXNativeTarget "GuestCheckInSystem" */;
 			buildPhases = (
-				1C7750DF79BA7005C9FF0CB0 /* [CP] Check Pods Manifest.lock */,
+				096B615B6474211BF41AAE1F /* [CP] Check Pods Manifest.lock */,
 				9DD1B1151FA44F0200226733 /* Sources */,
 				9DD1B1161FA44F0200226733 /* Frameworks */,
 				9DD1B1171FA44F0200226733 /* Resources */,
-				ACE2FD750D1B9F72F34FEFE9 /* [CP] Embed Pods Frameworks */,
-				CAF6C860C30E7959FA625842 /* [CP] Copy Pods Resources */,
+				886F3AB58B27B99ADC9EBF00 /* [CP] Embed Pods Frameworks */,
+				B43DD9E3223EE59F1265E206 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,7 +253,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1C7750DF79BA7005C9FF0CB0 /* [CP] Check Pods Manifest.lock */ = {
+		096B615B6474211BF41AAE1F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -231,54 +264,40 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SlackChannelBotIntegration-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-GuestCheckInSystem-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ACE2FD750D1B9F72F34FEFE9 /* [CP] Embed Pods Frameworks */ = {
+		886F3AB58B27B99ADC9EBF00 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SlackChannelBotIntegration/Pods-SlackChannelBotIntegration-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-GuestCheckInSystem/Pods-GuestCheckInSystem-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/RSFloatInputView/RSFloatInputView.framework",
 				"${BUILT_PRODUCTS_DIR}/RSSelectionMenu/RSSelectionMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SKCore/SKCore.framework",
 				"${BUILT_PRODUCTS_DIR}/SKWebAPI/SKWebAPI.framework",
-				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSFloatInputView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSSelectionMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKWebAPI.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SlackChannelBotIntegration/Pods-SlackChannelBotIntegration-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GuestCheckInSystem/Pods-GuestCheckInSystem-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CAF6C860C30E7959FA625842 /* [CP] Copy Pods Resources */ = {
+		B43DD9E3223EE59F1265E206 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -290,7 +309,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SlackChannelBotIntegration/Pods-SlackChannelBotIntegration-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GuestCheckInSystem/Pods-GuestCheckInSystem-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -300,14 +319,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D2965A51FA6F57E0070F9B2 /* SocketAPI.swift in Sources */,
 				40EFE6E41FEDBA0B006DAC9A /* TextFieldEffects.swift in Sources */,
 				9DD1B11F1FA44F0200226733 /* ViewController.swift in Sources */,
 				406BF8F51FF04F3900E87C1E /* UIViewController+Alerts.m in Sources */,
 				40036D7E1FEF2C34007CBE80 /* Slackbot.swift in Sources */,
 				40F7D8121FF0366100D17776 /* ImageUploadManager.swift in Sources */,
+				404B51EF1FF08D4200FC6384 /* UIColorExtension.swift in Sources */,
 				402F37941FEC77A20014467B /* User.swift in Sources */,
-				9D2965A31FA6F38D0070F9B2 /* SlackAPI.swift in Sources */,
 				9D124BF11FA49B2C003A8B3B /* SlackConstants.swift in Sources */,
 				9DD1B11D1FA44F0200226733 /* AppDelegate.swift in Sources */,
 				406BF8F11FF04F2600E87C1E /* Reach.swift in Sources */,
@@ -434,7 +452,7 @@
 		};
 		9DD1B1421FA44F0300226733 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDB5A7784065CD20B9AC5293 /* Pods-SlackChannelBotIntegration.debug.xcconfig */;
+			baseConfigurationReference = 335DCCD9001B6025B7E15495 /* Pods-GuestCheckInSystem.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -452,7 +470,7 @@
 		};
 		9DD1B1431FA44F0300226733 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D39AFC1267F0424779E3FE5 /* Pods-SlackChannelBotIntegration.release.xcconfig */;
+			baseConfigurationReference = 7E18966BD0F1ED307EF0C968 /* Pods-GuestCheckInSystem.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '3325D7F9B83C40CE9F1F19848F2402C6'
+               BlueprintIdentifier = '48C3110EC634D5D307296A425A93150A'
                BlueprintName = 'SKWebAPI'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SKWebAPI.framework'>

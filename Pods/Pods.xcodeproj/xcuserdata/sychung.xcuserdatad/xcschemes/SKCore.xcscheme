@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5C9772FB03CDEFF997AD364389B95799'
+               BlueprintIdentifier = '26218F42C7F02E27860D7B81DD6B4DB3'
                BlueprintName = 'SKCore'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SKCore.framework'>

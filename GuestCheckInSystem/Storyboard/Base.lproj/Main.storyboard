@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TrebuchetMSBold.ttf">
+            <string>TrebuchetMS-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuestCheckInSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDF-pZ-AV4" customClass="IsaoTextField" customModule="GuestCheckInSystem" customModuleProvider="target">
+                                <rect key="frame" x="249" y="462" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5xg-R1-sXf"/>
+                                    <constraint firstAttribute="width" constant="300" id="cyx-yL-qiM"/>
+                                </constraints>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                        <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTl-aF-ujX">
+                                <rect key="frame" x="249" y="920" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="qYC-l0-ik0"/>
+                                    <constraint firstAttribute="width" constant="300" id="yod-2k-ohJ"/>
+                                </constraints>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapSubmitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f4d-mX-pDg"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maximus_preview1-" highlightedImage="maximus_preview1-" translatesAutoresizingMaskIntoConstraints="NO" id="NfT-Yh-zwH">
+                                <rect key="frame" x="274" y="80" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="I5w-qG-5uq"/>
+                                    <constraint firstAttribute="height" constant="250" id="Rnu-Yy-Eyy"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Host" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HUt-lq-en9" customClass="IsaoTextField" customModule="GuestCheckInSystem" customModuleProvider="target">
+                                <rect key="frame" x="249" y="704" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5QH-jc-EfJ"/>
+                                    <constraint firstAttribute="width" constant="300" id="dYP-OB-ONo"/>
+                                </constraints>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="send"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                        <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Reason For Visit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nBh-9M-yWe" customClass="IsaoTextField" customModule="GuestCheckInSystem" customModuleProvider="target">
+                                <rect key="frame" x="249" y="583" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NtU-Bg-xYu"/>
+                                    <constraint firstAttribute="width" constant="300" id="RxM-eP-OE2"/>
+                                </constraints>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="send"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                        <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nBh-9M-yWe" firstAttribute="centerX" secondItem="NfT-Yh-zwH" secondAttribute="centerX" id="31n-t3-O45"/>
+                            <constraint firstItem="OTl-aF-ujX" firstAttribute="trailing" secondItem="HUt-lq-en9" secondAttribute="trailing" id="5rF-Nv-E05"/>
+                            <constraint firstItem="aDF-pZ-AV4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9lJ-qH-3wD"/>
+                            <constraint firstItem="nBh-9M-yWe" firstAttribute="leading" secondItem="HUt-lq-en9" secondAttribute="leading" id="9my-nJ-2pM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OTl-aF-ujX" secondAttribute="bottom" constant="44" id="Fcu-ww-hLW"/>
+                            <constraint firstItem="OTl-aF-ujX" firstAttribute="centerX" secondItem="NfT-Yh-zwH" secondAttribute="centerX" id="H51-4k-ZaX"/>
+                            <constraint firstItem="nBh-9M-yWe" firstAttribute="top" secondItem="aDF-pZ-AV4" secondAttribute="bottom" constant="81" id="Nc5-Mz-g3J"/>
+                            <constraint firstItem="aDF-pZ-AV4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="249" id="QfR-E9-3oI"/>
+                            <constraint firstItem="HUt-lq-en9" firstAttribute="centerX" secondItem="NfT-Yh-zwH" secondAttribute="centerX" id="S1k-WA-77F"/>
+                            <constraint firstItem="aDF-pZ-AV4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="462" id="SZt-1Z-57i"/>
+                            <constraint firstItem="NfT-Yh-zwH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="WCz-tR-tfR"/>
+                            <constraint firstItem="NfT-Yh-zwH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b4S-eU-SPG"/>
+                            <constraint firstItem="HUt-lq-en9" firstAttribute="top" secondItem="nBh-9M-yWe" secondAttribute="bottom" constant="81" id="hMj-6h-TEM"/>
+                            <constraint firstItem="nBh-9M-yWe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="15" id="i6N-eg-8Fo"/>
+                            <constraint firstItem="aDF-pZ-AV4" firstAttribute="leading" secondItem="nBh-9M-yWe" secondAttribute="leading" id="jZv-MH-lyH"/>
+                            <constraint firstItem="aDF-pZ-AV4" firstAttribute="trailing" secondItem="nBh-9M-yWe" secondAttribute="trailing" id="oga-w5-g6K"/>
+                            <constraint firstItem="OTl-aF-ujX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p0l-S2-P8v"/>
+                            <constraint firstItem="nBh-9M-yWe" firstAttribute="trailing" secondItem="HUt-lq-en9" secondAttribute="trailing" id="pEk-z2-kMr"/>
+                            <constraint firstItem="nBh-9M-yWe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rbU-AW-sO8"/>
+                            <constraint firstItem="OTl-aF-ujX" firstAttribute="leading" secondItem="HUt-lq-en9" secondAttribute="leading" id="sic-MS-Azg"/>
+                            <constraint firstItem="HUt-lq-en9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t3S-JG-9D7"/>
+                            <constraint firstItem="aDF-pZ-AV4" firstAttribute="centerX" secondItem="NfT-Yh-zwH" secondAttribute="centerX" id="z7h-54-fZI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="guestField" destination="aDF-pZ-AV4" id="Qq3-jB-qQF"/>
+                        <outlet property="hostField" destination="HUt-lq-en9" id="2An-jP-8yV"/>
+                        <outlet property="photo" destination="NfT-Yh-zwH" id="pDb-mA-3kX"/>
+                        <outlet property="reasonField" destination="nBh-9M-yWe" id="f3a-6U-LiJ"/>
+                        <outlet property="submitButton" destination="OTl-aF-ujX" id="NfF-UO-1jG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115.625" y="122.46093749999999"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="maximus_preview1-" width="580" height="386"/>
+    </resources>
+</document>
