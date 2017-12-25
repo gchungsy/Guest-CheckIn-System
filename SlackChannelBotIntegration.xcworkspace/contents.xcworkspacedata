@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SlackChannelBotIntegration.xcodeproj">
+      location = "group:/Users/sychung/Desktop/Guest-CheckIn-System/GuestCheckInSystem.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
