@@ -1,24 +1,33 @@
 PODS:
+  - Alamofire (4.6.0)
   - DropDown (2.0.2)
   - RSFloatInputView (1.0.0)
   - RSSelectionMenu (3.1)
   - SKCore (4.0.4)
   - SKWebAPI (4.0.7):
     - SKCore
+  - Starscream (3.0.3)
+  - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.3)
   - DropDown
   - RSFloatInputView
   - RSSelectionMenu
   - SKWebAPI
+  - Starscream
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   DropDown: 75562633a203f57a917021b4edb96c76f293b0ec
   RSFloatInputView: fea19c7b6c1228047379ee38ca9bca9e9d5a0fd6
   RSSelectionMenu: c38899d621bd8fc87b187b6e63bcda2f3b4be9bd
   SKCore: 47f7643fc82ed78fc1954350347dcb2811990812
   SKWebAPI: a8538700c992fd11be1914a0859ac572b3aea756
+  Starscream: dfb1b3f39506717ee52b67fb48de0c8269504cbc
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 0b94c977a7e902a75a111c5da695d43500f2a9b5
+PODFILE CHECKSUM: caa9bec398a8df6f290d535cf324792fdcc028d4
 
 COCOAPODS: 1.3.1
