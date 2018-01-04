@@ -11,6 +11,7 @@ import RSSelectionMenu
 import Photos
 import SKWebAPI
 
+var imageData: Data?
 
 class ViewController: UIViewController {
     
@@ -20,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var guestField: IsaoTextField!
     @IBOutlet weak var reasonField: IsaoTextField!
     @IBOutlet weak var hostField: IsaoTextField!
+    @IBOutlet weak var photoField: IsaoTextField!
     
     @IBOutlet weak var submitButton: UIButton!
     
@@ -43,49 +45,77 @@ class ViewController: UIViewController {
     
     var delegate: RSSelectionMenuDelegate<Any>?
     
+    var webhookbot = Slackbot(url: SlackID.WebHookUrl.rawValue)
+    let webAPI = WebAPI(token: SlackID.WebAPIToken.rawValue)
+    
     //MARK: - DropDown's
 
     let chooseReasonDropDown = DropDown()
     
     lazy var dropDowns: [DropDown] = { return [self.chooseReasonDropDown] }()
-
-    @IBAction func didTapSubmitButton(_ sender: UIButton) {
     
+    @IBAction func didTapSubmitButton(_ sender: UIButton) {
+        
+        var imageURL: String!
+        var channels = [String]()
         let record_guest = guestField.text!
         let record_reason = reasonField.text!
         if clearUserFields() {
-            var webhookbot = Slackbot(url: SlackID.WebHookUrl.rawValue)
             
-            for user_realname in selectedDataArray {
-                if let i = user_array.index(where: {$0.realname == user_realname}) {
-                    let obj = user_array[i]
-                    webhookbot.botname = "visitbot"
-                    webhookbot.icon = ":runner:" //https://www.webpagefx.com/tools/emoji-cheat-sheet/
-                    webhookbot.markdown = true
-                    webhookbot.channel = obj.id
-                    let pretext = "*Hey \(obj.firstname)! \(record_guest.capitalized) is here for you at the front desk.*"
-                    
-                    let fields = [
-                                  slackFields(title: "Reason For Visit",
-                                              value: "\(record_reason)\n",
-                                              short: true)]
-                    
-                    webhookbot.sendSideBySideMessage(fallback: "New Message", pretext: pretext, color: "#D00000", fields: fields)
-                }
+//            for user_realname in selectedDataArray {
+//                if let i = user_array.index(where: {$0.realname == user_realname}) {
+//                    let obj = user_array[i]
+//                    channels.append(obj.id)
+//                }
+//            }
+            
+            channels.append("#general")
+            if imageData != nil {
+                webAPI.authenticationTest(success: { (success) in
+                    self.webAPI.uploadFile(file: imageData!, filename: record_guest + ".png", channels: channels, success: { (file) in
+                        print("-------------------------------------")
+                        imageURL = file.urlPrivate!
+                        print(imageURL)
+                        print(file)
+                        self.sendMessage(record_guest: record_guest, record_reason: record_reason, imageURL: imageURL!)
+                    }, failure: { (error) in
+                        self.sendMessage(record_guest: record_guest, record_reason: record_reason)
+                        print(error)
+                    })
+                }, failure: nil)
             }
         }
         else
         {
             showMessagePrompt("Please complete the form before you submit it.")
         }
-        
-        
     }
     
+    func sendMessage(record_guest:String, record_reason: String, imageURL: String? = nil) {
+        
+        for user_realname in selectedDataArray {
+            if let i = user_array.index(where: {$0.realname == user_realname}) {
+                let obj = user_array[i]
+                webhookbot.botname = "visitbot"
+                webhookbot.icon = ":runner:" //https://www.webpagefx.com/tools/emoji-cheat-sheet/
+                webhookbot.markdown = true
+                webhookbot.channel = obj.id
+                let pretext = "*Hey \(obj.firstname)! \(record_guest.capitalized) is here for you at the front desk.*"
+                let fields = [slackFields(title: "Reason For Visit",value: "\(record_reason)\n",short: true)]
+                
+                if imageURL != nil {
+                    webhookbot.sendSideBySideMessage(fallback: "New Message", pretext: pretext, color: "#D00000", fields: fields, image: imageURL, thumb: imageURL)
+                } else {
+                    webhookbot.sendSideBySideMessage(fallback: "New Message", pretext: pretext, color: "#D00000", fields: fields)
+                }
+            }
+        }
+    }
+    
+    
     func fetchWorkSpaceUsers() {
-        let webAPI = WebAPI(token: SlackID.WebAPIToken.rawValue)
         webAPI.authenticationTest(success: { (success) in
-            webAPI.usersList(success: { (users) in
+            self.webAPI.usersList(success: { (users) in
                 print(users)
                 for user in users!
                 {
@@ -100,7 +130,6 @@ class ViewController: UIViewController {
                         if(components.count > 0) {
                             firstname = components.removeFirst()
                         }
-                        
                         print("User_Name: ", name)
                         print("User_RealName: ", realname)
                         print("User_FirstName: ", firstname)
@@ -132,7 +161,8 @@ class ViewController: UIViewController {
         guestField.text = ""
         reasonField.text = ""
         hostField.text = ""
-      
+        photoField.text = ""
+        photo.image = #imageLiteral(resourceName: "maximus_preview1-")
         //examine the size of the image if find out if user have uploaded their own photo
         //sizeOfUIImage()
         
@@ -175,15 +205,13 @@ class ViewController: UIViewController {
         photo.layer.masksToBounds = false
         photo.layer.cornerRadius = photo.frame.height/2
         photo.clipsToBounds = true
+        photo.image = #imageLiteral(resourceName: "maximus_preview1-")
         
         // TextField
-        //guestName.delegate = self
-        //guestName.setPadding()
-        //guestName.setBottomBorder()
-        //guestName.font = UIFont(name: "Helvetica", size: 14)!
         guestField.clearsOnBeginEditing = true
         hostField.isUserInteractionEnabled = false
         reasonField.isUserInteractionEnabled = false
+        photoField.isUserInteractionEnabled = false
         
         // Button
         submitButton.layer.borderWidth = 1
@@ -199,7 +227,7 @@ class ViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didRecognizeTapReasonField(_:)))
         reasonField.superview?.addGestureRecognizer(tapGesture)
         hostField.superview?.addGestureRecognizer(tapGesture)
-        
+        photoField.superview?.addGestureRecognizer(tapGesture)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -219,6 +247,9 @@ class ViewController: UIViewController {
         if gesture.state == .ended {
             if reasonField.frame.contains(point) {
                 chooseReasonDropDown.show()
+            }
+            if photoField.frame.contains(point) {
+                didTapTakePicture()
             }
             if hostField.frame.contains(point) {
                 showAsFormSheetWithSearch()

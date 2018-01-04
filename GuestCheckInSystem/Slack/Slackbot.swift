@@ -67,7 +67,7 @@ class Slackbot {
         sendSideBySideMessage(fallback: fallback, pretext: pretext, text: text, color: color, fields: [slackFields(title: title, value: value, short: short)], channel: channel)
     }
     
-    func sendSideBySideMessage(fallback: String? = nil, pretext: String? = nil, text: String? = nil, color: String? = nil, fields:[slackFields]?, channel: String? = nil) {
+    func sendSideBySideMessage(fallback: String? = nil, pretext: String? = nil, text: String? = nil, color: String? = nil, fields:[slackFields]?, channel: String? = nil, image: String? = nil, thumb: String? = nil) {
         //Initialize the three arrays to be used
         var slackJsonElements  = [String:Any]()
         var slackJsonAttachments  = [String:Any]()
@@ -102,7 +102,7 @@ class Slackbot {
             slackJsonAttachments["mrkdwn_in"] = ["fallback","pretext", "fields"]
         }
         
-        //Attachments: fallback, pretext, color
+        //Attachments: fallback, pretext, color, image, thumb
         if fallback != nil {
             slackJsonAttachments["fallback"] = fallback
             slackJsonAttachments["pretext"] = pretext ?? fallback
@@ -113,6 +113,14 @@ class Slackbot {
         
         if color != nil {
             slackJsonAttachments["color"] = color!
+        }
+        
+        if image != nil {
+            slackJsonAttachments["image_url"] = image!
+        }
+        
+        if thumb != nil {
+            slackJsonAttachments["thumb_url"] = thumb!
         }
         
         //Fields: title, value, short
