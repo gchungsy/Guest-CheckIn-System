@@ -69,7 +69,7 @@ class ViewController: UIViewController {
 //                }
 //            }
             
-            channels.append("#general")
+            channels.append("#general") // Send picture to '#general' public channel everytime so that we can get the image URL the be public (saves money but bad)
             if imageData != nil {
                 webAPI.authenticationTest(success: { (success) in
                     self.webAPI.uploadFile(file: imageData!, filename: record_guest + ".png", channels: channels, success: { (file) in
@@ -146,9 +146,7 @@ class ViewController: UIViewController {
             }, failure: { (error) in
                 print(error)
             })
-            
         }, failure: nil)
-        
     }
     
     func clearUserFields()-> Bool{
